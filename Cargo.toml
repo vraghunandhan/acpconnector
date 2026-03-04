@@ -1,0 +1,20 @@
+[package]
+name = "acpconnector"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+redis = { version = "0.25", features = ["tokio-comp", "json"] }
+tokio = { version = "1", features = ["full"] }
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["clock", "serde"] }
+time = "0.3.36"
+validator = { version = "0.18", features = ["derive"] }
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+async-trait = "0.1"
