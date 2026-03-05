@@ -17,6 +17,7 @@ pub struct AppState {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    dotenvy::dotenv().ok();
     tracing_subscriber::fmt::init();
 
     let redis_url = std::env::var("REDIS_URL").unwrap_or_else(|_| "redis://127.0.0.1:6379".to_string());
